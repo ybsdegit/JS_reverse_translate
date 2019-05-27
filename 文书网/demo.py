@@ -25,11 +25,11 @@ with open('guid.js','r', encoding='utf-8') as f:
 
 
 context = js2py.EvalJs()
-# context.execute(js_md5)
-# context.execute(js_sha1)
-# context.execute(js_base64)
-# context.execute(js_content)
+context.execute(js_md5)
+context.execute(js_sha1)
+context.execute(js_base64)
+context.execute(js_content)
 context.execute(js_guid)
 #
-# print('vl5x:', context.result)
+print('vl5x:', context.result)
 print('guid:', context.guid)
