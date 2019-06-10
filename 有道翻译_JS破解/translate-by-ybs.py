@@ -3,7 +3,7 @@
 # @software: PyCharm
 # @time: 2019/5/21 15:38
 # @author: Paulson●Wier
-# @file: youdao_fanyi.py
+# @file: translate-by-ybs.py
 # @desc:
 import random
 
@@ -68,14 +68,34 @@ def translate(key):
     result_tgt = result['tgt']
     result_src = result['src']
 
-    print(f"""‘{result_src}’,的翻译是: ‘{result_tgt}’""")
+    print(f"""‘{result_src}’\n‘{result_tgt}’""")
 
     try:
-        print('其它翻译:\n'+''.join(res['smartResult']['entries']))
+        print('\n其它翻译:\n'+''.join(res['smartResult']['entries']))
     except KeyError:
         pass
 
 
 if __name__ == '__main__':
-    # translate("You are such a smart kid!")
-    translate("你可真是个小机灵鬼！")
+    # 1. 正常执行代码
+    # translate("你可真是个小机灵鬼！")
+
+    # 2. 命令行传入参数执行代码，不适合用于打包成exe执行
+    # from sys import argv
+    # print(len(argv))
+    #
+    # if len(argv) == 2:
+    #     t_text = argv[1]
+    #     translate(t_text)
+    # elif len(argv) > 2:
+    #     t_text = argv[1:]
+    #     translate(' '.join(t_text))
+    # else:
+    #     print('请使用以下方式执行代码：\n python youdao_fanyi xxx')
+
+    # 3. input 输入参数，打包后可以再黑框中输入参数
+    while True:
+        t_text = input("\n请输入待翻译的文本(from ybs):\n")
+        translate(t_text)
+
+
