@@ -5,3 +5,5 @@ JS逆向—破解有道、百度、谷歌翻译爬虫参数（sign）
 [JS逆向——破解百度翻译参数（sign）爬虫 超级详细](https://blog.csdn.net/qq_38534107/article/details/90440403)
 
 [JS逆向——破解有道翻译爬虫参数（sign）](https://blog.csdn.net/qq_38534107/article/details/90411167)
+
+[python 打包翻译exe小程序，打造你自己的翻译软件](https://blog.csdn.net/qq_38534107/article/details/91383869)
